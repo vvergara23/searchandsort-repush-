@@ -1,3 +1,5 @@
+//Veronica Vergara
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +22,8 @@ public class SearchAndSort {
 		String store = in.nextLine(); //array, list
 		System.out.println("\nEnter the data:\nNOTE: Please seperate each item with ','");
 		String input = in.nextLine(); //data seperated by commas
+		
+		
 		String[] inputsplit = input.split(",");
 		
 		if(algorithm == "bubblesort") {
@@ -177,17 +181,17 @@ public class SearchAndSort {
 	        return -1; 
 	    } 
 	 static void mergeSortInteger(int x[], int l, int m, int r) { 
-	        int n1 = m - l + 1; 
-	        int n2 = r - m; 
-	        int L[] = new int [n1]; 
-	        int R[] = new int [n2]; 	  
-	        for (int i=0; i<n1; ++i) 
+	        int a = m - l + 1; 
+	        int b = r - m; 
+	        int L[] = new int [a]; 
+	        int R[] = new int [b]; 	  
+	        for (int i=0; i<a; ++i) 
 	            L[i] = x[l + i]; 
-	        for (int j=0; j<n2; ++j) 
+	        for (int j=0; j<b; ++j) 
 	            R[j] = x[m + 1+ j]; 
 	        int i = 0, j = 0; 
 	        int k = l; 
-	        while (i < n1 && j < n2) 
+	        while (i < a && j < b) 
 	        { 
 	            if (L[i] <= R[j]){ 
 	                x[k] = L[i]; 
@@ -199,12 +203,12 @@ public class SearchAndSort {
 	            } 
 	            k++; 
 	        } 
-	        while (i < n1) { 
+	        while (i < a) { 
 	            x[k] = L[i]; 
 	            i++; 
 	            k++; 
 	        } 
-	        while (j < n2) { 
+	        while (j < b) { 
 	            x[k] = R[j]; 
 	            j++; 
 	            k++; 
